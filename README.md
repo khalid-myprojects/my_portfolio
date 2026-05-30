@@ -6,7 +6,7 @@
 
 A modern, responsive, and visually engaging developer portfolio built to showcase my skills, projects, experience, and journey as a Flutter Developer.
 
-[Live Demo](#) • [LinkedIn](https://linkedin.com/in/khalid-imran-30b118336) • [GitHub](https://github.com/khalid-myprojects)
+[Live Demo](https://khalidimrandev.netlify.app/) • [LinkedIn](https://linkedin.com/in/khalid-imran-30b118336) • [GitHub](https://github.com/khalid-myprojects)
 
 </div>
 

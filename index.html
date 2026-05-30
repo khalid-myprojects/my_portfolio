@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khalid Imran — Flutter Developer</title>
+  <meta name="description" content="Khalid Imran — Flutter Developer & CS Student at UET Taxila. Building cross-platform mobile apps with Flutter, Firebase & REST APIs."/>
+  <meta name="author" content="Khalid Imran"/>
+  <meta property="og:title" content="Khalid Imran — Flutter Developer"/>
+  <meta property="og:description" content="Cross-platform mobile apps with Flutter, Firebase & REST APIs."/>
+  <meta property="og:type" content="website"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">KI<span>.</span></div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Initialising…</p>
+    </div>
+  </div>
+
+  <!-- CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress"></div>
+
+  <!-- BACKGROUND -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+  <div id="noise-overlay"></div>
+
+  <!-- ══════════════════════ NAVBAR ══════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">KI<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about"     class="nav-link">About</a></li>
+        <li><a href="#skills"    class="nav-link">Skills</a></li>
+        <li><a href="#projects"  class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact"   class="nav-link">Contact</a></li>
+        <li>
+          <a href="Khalid_Imran_CV.pdf" download class="nav-cta">
+            <i class="fa-solid fa-file-arrow-down"></i> Resume
+          </a>
+        </li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════ HERO ══════════════════════ -->
+  <section id="hero">
+    <div class="hero-wrap">
+
+      <div class="hero-text" data-anim="0">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Available for Internships &nbsp;·&nbsp; Pakistan 🇵🇰
+        </div>
+
+        <h1 class="hero-name" data-anim="100">
+          <span>Khalid</span>
+          <span class="name-accent">Imran</span>
+        </h1>
+
+        <div class="hero-role" data-anim="200">
+          I build&nbsp;<span class="typed-wrap"><span id="typed"></span><span class="caret">|</span></span>
+        </div>
+
+        <p class="hero-bio" data-anim="300">
+          CS student at <strong>UET Taxila</strong> (6th Semester) — crafting
+          cross-platform mobile apps with <strong>Flutter &amp; Dart</strong>.
+          Obsessed with clean architecture, pixel-perfect UI, and real impact.
+        </p>
+
+        <div class="hero-actions" data-anim="400">
+          <a href="Khalid_Imran_CV.pdf" download class="btn-primary">
+            <i class="fa-solid fa-download"></i> Download CV
+          </a>
+          <a href="#projects" class="btn-outline">
+            View Projects <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="hero-socials" data-anim="500">
+          <a href="https://linkedin.com/in/khalid-imran-30b118336" target="_blank" rel="noopener" class="social-pill" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/khalid-myprojects" target="_blank" rel="noopener" class="social-pill" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="mailto:khalidimran4566450@gmail.com" class="social-pill" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-anim="200">
+        <div class="photo-frame">
+          <div class="frame-ring ring-outer"></div>
+          <div class="frame-ring ring-inner"></div>
+          <div class="photo-img">
+            <img src="profile.png" alt="Khalid Imran" onerror="this.closest('.photo-img').classList.add('fallback')"/>
+          </div>
+          <div class="float-chip chip-a">
+            <i class="fa-brands fa-flutter"></i>
+            <span>Flutter Dev</span>
+          </div>
+          <div class="float-chip chip-b">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>UET Taxila</span>
+          </div>
+          <div class="code-block" aria-hidden="true">
+            <span class="kw">class</span> <span class="nm">KhalidImran</span> {<br/>
+            &nbsp;&nbsp;<span class="prop">skills</span>: <span class="str">Flutter</span><span class="op">,</span><br/>
+            &nbsp;&nbsp;<span class="prop">passion</span>: <span class="str">Mobile Dev</span><br/>
+            }
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <span class="scroll-text">Scroll</span>
+      <span class="scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ══════════════════════ ABOUT ══════════════════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-eyebrow" data-reveal>About Me</span>
+        <h2 class="sec-title" data-reveal>Building apps that <em>matter</em></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-stats" data-reveal>
+          <div class="stat-item">
+            <span class="stat-n" data-count="10">0</span>
+            <span class="stat-l">Projects Built</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-n" data-count="3">0</span>
+            <span class="stat-l">Years Coding</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-n" data-count="6">0</span>
+            <span class="stat-l">Semester</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-n" data-count="100">0</span>
+            <span class="stat-l">% Committed</span>
+          </div>
+        </div>
+
+        <div class="about-text" data-reveal data-delay="120">
+          <p>I'm <strong>Khalid Imran</strong>, a Computer Science student at <strong>University of Engineering &amp; Technology Taxila</strong>, currently in my 6th semester. I build cross-platform mobile applications with Flutter and Dart — prioritising performance, clean architecture, and intuitive user experience.</p>
+          <p>My stack spans Firebase authentication &amp; Firestore, REST API integration, state management with Provider &amp; GetX, and pixel-perfect UI from Figma. I bridge great engineering with great design.</p>
+          <p>I'm seeking an <strong>internship</strong> where I can contribute to real-world mobile projects, collaborate with seasoned engineers, and grow into a professional mobile developer.</p>
+          <div class="tag-cloud">
+            <span><i class="fa-brands fa-flutter"></i> Flutter</span>
+            <span><i class="fa-solid fa-code"></i> Dart</span>
+            <span><i class="fa-solid fa-fire"></i> Firebase</span>
+            <span><i class="fa-solid fa-plug"></i> REST APIs</span>
+            <span><i class="fa-solid fa-layer-group"></i> State Mgmt</span>
+            <span><i class="fa-solid fa-pen-ruler"></i> UI/UX</span>
+            <span><i class="fa-solid fa-building-columns"></i> Clean Arch</span>
+            <span><i class="fa-solid fa-mobile-screen"></i> Cross-Platform</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ SKILLS ══════════════════════ -->
+  <section id="skills">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-eyebrow" data-reveal>Technical Skills</span>
+        <h2 class="sec-title" data-reveal>What I work <em>with</em></h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card" data-reveal data-delay="0">
+          <div class="sk-top">
+            <div class="sk-icon" style="--c:#54C5F8"><i class="fa-brands fa-flutter"></i></div>
+            <span class="sk-pct">88%</span>
+          </div>
+          <h3>Flutter</h3>
+          <p>Cross-platform mobile apps with smooth animations and pixel-perfect layouts.</p>
+          <div class="sk-bar-track"><div class="sk-bar" data-w="88" style="--c:#54C5F8"></div></div>
+        </div>
+
+        <div class="skill-card" data-reveal data-delay="60">
+          <div class="sk-top">
+            <div class="sk-icon" style="--c:#00B4D8"><i class="fa-solid fa-code"></i></div>
+            <span class="sk-pct">85%</span>
+          </div>
+          <h3>Dart</h3>
+          <p>Strongly-typed expressive language powering every Flutter application.</p>
+          <div class="sk-bar-track"><div class="sk-bar" data-w="85" style="--c:#00B4D8"></div></div>
+        </div>
+
+        <div class="skill-card" data-reveal data-delay="120">
+          <div class="sk-top">
+            <div class="sk-icon" style="--c:#FFA611"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <span class="sk-pct">80%</span>
+          </div>
+          <h3>Firebase</h3>
+          <p>Auth, Firestore, real-time sync, and cloud backend integration.</p>
+          <div class="sk-bar-track"><div class="sk-bar" data-w="80" style="--c:#FFA611"></div></div>
+        </div>
+
+        <div class="skill-card" data-reveal data-delay="180">
+          <div class="sk-top">
+            <div class="sk-icon" style="--c:#6EE7B7"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+            <span class="sk-pct">82%</span>
+          </div>
+          <h3>REST APIs</h3>
+          <p>HTTP integration, JSON parsing, async/await patterns, error handling.</p>
+          <div class="sk-bar-track"><div class="sk-bar" data-w="82" style="--c:#6EE7B7"></div></div>
+        </div>
+
+        <div class="skill-card" data-reveal data-delay="240">
+          <div class="sk-top">
+            <div class="sk-icon" style="--c:#F472B6"><i class="fa-solid fa-pen-ruler"></i></div>
+            <span class="sk-pct">78%</span>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>Figma to Flutter — translating mockups into refined, responsive UIs.</p>
+          <div class="sk-bar-track"><div class="sk-bar" data-w="78" style="--c:#F472B6"></div></div>
+        </div>
+
+        <div class="skill-card" data-reveal data-delay="300">
+          <div class="sk-top">
+            <div class="sk-icon" style="--c:#A78BFA"><i class="fa-solid fa-layer-group"></i></div>
+            <span class="sk-pct">75%</span>
+          </div>
+          <h3>State Management</h3>
+          <p>Provider, GetX — clean, scalable state patterns across complex apps.</p>
+          <div class="sk-bar-track"><div class="sk-bar" data-w="75" style="--c:#A78BFA"></div></div>
+        </div>
+
+        <div class="skill-card" data-reveal data-delay="360">
+          <div class="sk-top">
+            <div class="sk-icon" style="--c:#FB923C"><i class="fa-brands fa-git-alt"></i></div>
+            <span class="sk-pct">80%</span>
+          </div>
+          <h3>Git & GitHub</h3>
+          <p>Version control, branch workflows, pull requests, clean commit history.</p>
+          <div class="sk-bar-track"><div class="sk-bar" data-w="80" style="--c:#FB923C"></div></div>
+        </div>
+
+        <div class="skill-card" data-reveal data-delay="420">
+          <div class="sk-top">
+            <div class="sk-icon" style="--c:#34D399"><i class="fa-solid fa-sitemap"></i></div>
+            <span class="sk-pct">72%</span>
+          </div>
+          <h3>Clean Architecture</h3>
+          <p>MVC, MVVM, separation of concerns, scalable folder structures.</p>
+          <div class="sk-bar-track"><div class="sk-bar" data-w="72" style="--c:#34D399"></div></div>
+        </div>
+
+      </div>
+
+      <!-- Tools row -->
+      <div class="tools-row" data-reveal>
+        <span class="tools-label">Tools &amp; IDEs:</span>
+        <div class="tools-pills">
+          <span><i class="fa-solid fa-robot"></i> Android Studio</span>
+          <span><i class="fa-solid fa-code"></i> VS Code</span>
+          <span><i class="fa-solid fa-vector-square"></i> Figma</span>
+          <span><i class="fa-solid fa-flask"></i> Postman</span>
+          <span><i class="fa-brands fa-github"></i> GitHub</span>
+          <span><i class="fa-solid fa-c"></i> C++ / OOP</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════ PROJECTS ══════════════════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-eyebrow" data-reveal>Projects</span>
+        <h2 class="sec-title" data-reveal>Things I've <em>built</em></h2>
+      </div>
+
+      <!-- Filter -->
+      <div class="filter-row" data-reveal>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="flutter">Flutter</button>
+        <button class="filter-btn" data-filter="firebase">Firebase</button>
+        <button class="filter-btn" data-filter="ui">UI/UX</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- ── Coffee Order App (LinkedIn + GitHub) ── -->
+        <article class="proj-card" data-reveal data-delay="0" data-cat="flutter ui">
+          <div class="proj-thumb" style="--ga:#1a0f07;--gb:#3d1e05">
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="cof-g" cx="50%" cy="40%" r="70%">
+                  <stop offset="0%" stop-color="#C2773A" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="#3d1e05" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#cof-g)"/>
+              <!-- Phone -->
+              <rect x="135" y="12" width="130" height="196" rx="22" fill="#0d0803" stroke="#C2773A" stroke-width="1.5" opacity="0.9"/>
+              <rect x="143" y="26" width="114" height="168" rx="13" fill="#07040100"/>
+              <!-- Coffee cup -->
+              <path d="M176,90 L224,90 L218,138 Q200,148 182,138 Z" fill="none" stroke="#C2773A" stroke-width="2" opacity="0.85"/>
+              <path d="M224,100 Q238,100 238,112 Q238,124 224,124" fill="none" stroke="#C2773A" stroke-width="2" opacity="0.6"/>
+              <!-- Steam -->
+              <path d="M190,82 Q193,72 190,64" fill="none" stroke="#C2773A" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+              <path d="M200,80 Q203,68 200,58" fill="none" stroke="#C2773A" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+              <path d="M210,82 Q213,72 210,64" fill="none" stroke="#C2773A" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+              <!-- Bottom UI -->
+              <rect x="150" y="150" width="100" height="20" rx="10" fill="#C2773A" opacity="0.5"/>
+              <rect x="163" y="155" width="74" height="10" rx="5" fill="#ffffff" opacity="0.2"/>
+              <!-- Stars / rating dots -->
+              <circle cx="185" cy="170" r="3" fill="#C2773A" opacity="0.7"/>
+              <circle cx="196" cy="170" r="3" fill="#C2773A" opacity="0.7"/>
+              <circle cx="207" cy="170" r="3" fill="#C2773A" opacity="0.4"/>
+              <!-- Saucer -->
+              <ellipse cx="200" cy="140" rx="28" ry="6" fill="#C2773A" opacity="0.18"/>
+            </svg>
+            <div class="proj-icon-overlay"><i class="fa-solid fa-mug-hot"></i></div>
+            <div class="proj-badge-new">New</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta-row">
+              <span class="proj-cat-tag">Flutter · UI</span>
+            </div>
+            <h3 class="proj-name">Coffee Order App</h3>
+            <p class="proj-desc">A beautifully crafted coffee ordering Flutter app featuring menu browsing, customisable orders, cart management, and smooth checkout flow with premium dark UI.</p>
+            <div class="proj-stack">
+              <span>Flutter</span><span>Dart</span><span>Provider</span><span>Custom UI</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://linkedin.com/in/khalid-imran-30b118336" target="_blank" rel="noopener" class="proj-link-btn li-btn">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a href="https://github.com/khalid-myprojects" target="_blank" rel="noopener" class="proj-link-btn gh-btn">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Digital Wallet App (LinkedIn + GitHub) ── -->
+        <article class="proj-card" data-reveal data-delay="80" data-cat="flutter firebase">
+          <div class="proj-thumb" style="--ga:#071a2e;--gb:#0a3a6b">
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="wal-g" cx="50%" cy="40%" r="70%">
+                  <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="#0a3a6b" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#wal-g)"/>
+              <!-- Phone -->
+              <rect x="135" y="12" width="130" height="196" rx="22" fill="#030d1c" stroke="#3B82F6" stroke-width="1.5" opacity="0.9"/>
+              <rect x="143" y="26" width="114" height="168" rx="13" fill="#02070f"/>
+              <!-- Card -->
+              <rect x="153" y="42" width="94" height="56" rx="10" fill="#1E40AF" opacity="0.7" stroke="#3B82F6" stroke-width="1"/>
+              <rect x="160" y="49" width="36" height="24" rx="5" fill="#60A5FA" opacity="0.3"/>
+              <rect x="160" y="80" width="50" height="5" rx="2.5" fill="#ffffff" opacity="0.3"/>
+              <rect x="185" y="80" width="25" height="5" rx="2.5" fill="#60A5FA" opacity="0.3"/>
+              <!-- Chip -->
+              <rect x="161" y="50" width="34" height="22" rx="4" fill="none" stroke="#FCD34D" stroke-width="1" opacity="0.7"/>
+              <!-- Balance -->
+              <rect x="153" y="108" width="94" height="6" rx="3" fill="#3B82F6" opacity="0.25"/>
+              <!-- Action icons row -->
+              <circle cx="172" cy="135" r="10" fill="#3B82F6" opacity="0.2" stroke="#3B82F6" stroke-width="1"/>
+              <circle cx="200" cy="135" r="10" fill="#3B82F6" opacity="0.2" stroke="#3B82F6" stroke-width="1"/>
+              <circle cx="228" cy="135" r="10" fill="#3B82F6" opacity="0.2" stroke="#3B82F6" stroke-width="1"/>
+              <!-- Recent tx -->
+              <rect x="153" y="155" width="94" height="14" rx="5" fill="#3B82F6" opacity="0.12" stroke="#3B82F6" stroke-width="0.7"/>
+              <rect x="153" y="174" width="94" height="14" rx="5" fill="#3B82F6" opacity="0.08" stroke="#3B82F6" stroke-width="0.5"/>
+            </svg>
+            <div class="proj-icon-overlay"><i class="fa-solid fa-wallet"></i></div>
+            <div class="proj-badge-new">New</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta-row">
+              <span class="proj-cat-tag">Flutter · Finance</span>
+            </div>
+            <h3 class="proj-name">Digital Wallet App</h3>
+            <p class="proj-desc">Full-featured digital wallet Flutter application with balance display, transaction history, send/receive flows, Firebase backend, and secure authentication.</p>
+            <div class="proj-stack">
+              <span>Flutter</span><span>Firebase</span><span>Firestore</span><span>GetX</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://linkedin.com/in/khalid-imran-30b118336" target="_blank" rel="noopener" class="proj-link-btn li-btn">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a href="https://github.com/khalid-myprojects" target="_blank" rel="noopener" class="proj-link-btn gh-btn">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── COSMOS App (LinkedIn + GitHub) ── -->
+        <article class="proj-card featured" data-reveal data-delay="160" data-cat="flutter ui">
+          <div class="proj-thumb" style="--ga:#010814;--gb:#0c0a2e">
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="spg" cx="50%" cy="50%" r="60%">
+                  <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.4"/>
+                  <stop offset="100%" stop-color="#0c0a2e" stop-opacity="0"/>
+                </radialGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3" result="b"/>
+                  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <rect width="400" height="220" fill="url(#spg)"/>
+              <!-- Stars -->
+              <circle cx="50" cy="30" r="1" fill="white" opacity="0.6"/>
+              <circle cx="80" cy="55" r="1.2" fill="white" opacity="0.8"/>
+              <circle cx="340" cy="40" r="1" fill="white" opacity="0.5"/>
+              <circle cx="360" cy="80" r="1.5" fill="white" opacity="0.7"/>
+              <circle cx="30" cy="180" r="1" fill="white" opacity="0.4"/>
+              <circle cx="370" cy="170" r="1.2" fill="white" opacity="0.6"/>
+              <circle cx="100" cy="150" r="0.8" fill="white" opacity="0.5"/>
+              <circle cx="310" cy="160" r="1" fill="white" opacity="0.4"/>
+              <!-- Phone -->
+              <rect x="130" y="12" width="140" height="198" rx="22" fill="#03050f" stroke="#7C3AED" stroke-width="1.5" opacity="0.9"/>
+              <rect x="138" y="26" width="124" height="170" rx="14" fill="#02030a"/>
+              <!-- Sun -->
+              <circle cx="200" cy="115" r="20" fill="#FCD34D" opacity="0.9" filter="url(#glow)"/>
+              <!-- Orbit rings -->
+              <circle cx="200" cy="115" r="38" fill="none" stroke="#7C3AED" stroke-width="0.8" opacity="0.5" stroke-dasharray="3,3"/>
+              <circle cx="200" cy="115" r="60" fill="none" stroke="#A78BFA" stroke-width="0.8" opacity="0.35" stroke-dasharray="4,4"/>
+              <!-- Planets -->
+              <circle cx="238" cy="115" r="7" fill="#54C5F8" opacity="0.9"/>
+              <circle cx="200" cy="55" r="10" fill="#E97C4A" opacity="0.9"/>
+              <ellipse cx="200" cy="55" rx="17" ry="4.5" fill="none" stroke="#E97C4A" stroke-width="1.5" opacity="0.6"/>
+              <!-- Planet 3 -->
+              <circle cx="140" cy="115" r="5" fill="#6EE7B7" opacity="0.8"/>
+              <!-- Title bar -->
+              <rect x="155" y="172" width="90" height="8" rx="4" fill="#7C3AED" opacity="0.7"/>
+              <rect x="168" y="185" width="64" height="5" rx="2.5" fill="#ffffff" opacity="0.18"/>
+            </svg>
+            <div class="proj-icon-overlay"><i class="fa-solid fa-satellite"></i></div>
+            <div class="proj-badge-new">Featured</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta-row">
+              <span class="proj-cat-tag">Flutter · Space</span>
+              <div class="stars-row">★★★★★</div>
+            </div>
+            <h3 class="proj-name">COSMOS App</h3>
+            <p class="proj-desc">Interactive solar system Flutter application featuring planet exploration, rich space animations, educational orbital mechanics, and an immersive dark-theme UI.</p>
+            <div class="proj-stack">
+              <span>Flutter</span><span>Dart</span><span>CustomPaint</span><span>Animations</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://linkedin.com/in/khalid-imran-30b118336" target="_blank" rel="noopener" class="proj-link-btn li-btn">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a href="https://github.com/khalid-myprojects" target="_blank" rel="noopener" class="proj-link-btn gh-btn">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Food Delivery App (LinkedIn only) ── -->
+        <article class="proj-card" data-reveal data-delay="0" data-cat="flutter ui">
+          <div class="proj-thumb" style="--ga:#0d1f12;--gb:#0d5c2e">
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="fdg" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="#22C55E" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#0d5c2e" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#fdg)"/>
+              <rect x="135" y="14" width="130" height="194" rx="22" fill="#070f0a" stroke="#22C55E" stroke-width="1.5" opacity="0.85"/>
+              <rect x="143" y="27" width="114" height="167" rx="13" fill="#040a06"/>
+              <circle cx="200" cy="80" r="26" fill="none" stroke="#22C55E" stroke-width="1.5" opacity="0.6"/>
+              <path d="M186,82 Q192,65 200,70 Q208,65 214,82" fill="none" stroke="#22C55E" stroke-width="2.2" stroke-linecap="round"/>
+              <rect x="192" y="82" width="16" height="18" rx="4" fill="none" stroke="#22C55E" stroke-width="1.8"/>
+              <rect x="151" y="118" width="98" height="28" rx="8" fill="#22C55E" opacity="0.1" stroke="#22C55E" stroke-width="0.8"/>
+              <rect x="151" y="153" width="98" height="28" rx="8" fill="#22C55E" opacity="0.06" stroke="#22C55E" stroke-width="0.6"/>
+              <rect x="159" y="126" width="52" height="5" rx="2.5" fill="#22C55E" opacity="0.5"/>
+              <rect x="159" y="161" width="40" height="5" rx="2.5" fill="#ffffff" opacity="0.2"/>
+            </svg>
+            <div class="proj-icon-overlay"><i class="fa-solid fa-utensils"></i></div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta-row">
+              <span class="proj-cat-tag">Flutter · UI Design</span>
+            </div>
+            <h3 class="proj-name">Food Delivery App <span class="ui-badge">UI</span></h3>
+            <p class="proj-desc">Modern food ordering interface with categories, restaurant cards, cart screens, and smooth page transitions.</p>
+            <div class="proj-stack">
+              <span>Flutter</span><span>Dart</span><span>Custom Widgets</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://linkedin.com/in/khalid-imran-30b118336" target="_blank" rel="noopener" class="proj-link-btn li-btn">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Firebase Login App (LinkedIn only) ── -->
+        <article class="proj-card" data-reveal data-delay="80" data-cat="flutter firebase">
+          <div class="proj-thumb" style="--ga:#1a0a2e;--gb:#4a1570">
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="fbg" cx="50%" cy="50%" r="60%">
+                  <stop offset="0%" stop-color="#A855F7" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#4a1570" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#fbg)"/>
+              <rect x="135" y="14" width="130" height="194" rx="22" fill="#0a0514" stroke="#A855F7" stroke-width="1.5" opacity="0.85"/>
+              <rect x="143" y="27" width="114" height="167" rx="13" fill="#06030d"/>
+              <path d="M200,52 L222,61 L222,86 Q222,106 200,115 Q178,106 178,86 L178,61 Z" fill="none" stroke="#A855F7" stroke-width="2.2" opacity="0.75"/>
+              <path d="M192,84 L197,89 L210,74" stroke="#A855F7" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="152" y="124" width="96" height="16" rx="7" fill="none" stroke="#A855F7" stroke-width="1" opacity="0.5"/>
+              <rect x="152" y="147" width="96" height="16" rx="7" fill="none" stroke="#A855F7" stroke-width="1" opacity="0.35"/>
+              <rect x="163" y="171" width="74" height="18" rx="9" fill="#A855F7" opacity="0.5"/>
+              <rect x="177" y="176" width="46" height="8" rx="4" fill="#ffffff" opacity="0.25"/>
+            </svg>
+            <div class="proj-icon-overlay"><i class="fa-solid fa-shield-halved"></i></div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta-row">
+              <span class="proj-cat-tag">Flutter · Firebase</span>
+            </div>
+            <h3 class="proj-name">Firebase Login App</h3>
+            <p class="proj-desc">Production-grade authentication with Firebase phone OTP, persistent user sessions, and comprehensive form validation.</p>
+            <div class="proj-stack">
+              <span>Flutter</span><span>Firebase Auth</span><span>OTP</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://linkedin.com/in/khalid-imran-30b118336" target="_blank" rel="noopener" class="proj-link-btn li-btn">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Weather App (LinkedIn only) ── -->
+        <article class="proj-card" data-reveal data-delay="160" data-cat="flutter">
+          <div class="proj-thumb" style="--ga:#0a1628;--gb:#0c2d55">
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="wg" cx="50%" cy="40%" r="65%">
+                  <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#0c2d55" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#wg)"/>
+              <rect x="135" y="14" width="130" height="194" rx="22" fill="#060e1c" stroke="#38BDF8" stroke-width="1.5" opacity="0.85"/>
+              <rect x="143" y="27" width="114" height="167" rx="13" fill="#030a14"/>
+              <!-- Sun/cloud -->
+              <circle cx="200" cy="75" r="18" fill="#FCD34D" opacity="0.7"/>
+              <ellipse cx="190" cy="97" rx="20" ry="13" fill="#94A3B8" opacity="0.5"/>
+              <ellipse cx="210" cy="100" rx="16" ry="11" fill="#94A3B8" opacity="0.45"/>
+              <!-- Rain drops -->
+              <line x1="185" y1="112" x2="182" y2="122" stroke="#38BDF8" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+              <line x1="196" y1="114" x2="193" y2="126" stroke="#38BDF8" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+              <line x1="207" y1="113" x2="204" y2="125" stroke="#38BDF8" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+              <!-- Temp -->
+              <rect x="155" y="132" width="90" height="10" rx="5" fill="#38BDF8" opacity="0.18"/>
+              <rect x="155" y="148" width="70" height="8" rx="4" fill="#38BDF8" opacity="0.12"/>
+              <!-- Bottom cards -->
+              <rect x="151" y="163" width="42" height="22" rx="7" fill="#38BDF8" opacity="0.12" stroke="#38BDF8" stroke-width="0.7"/>
+              <rect x="200" y="163" width="42" height="22" rx="7" fill="#38BDF8" opacity="0.12" stroke="#38BDF8" stroke-width="0.7"/>
+            </svg>
+            <div class="proj-icon-overlay"><i class="fa-solid fa-cloud-sun"></i></div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta-row">
+              <span class="proj-cat-tag">Flutter · REST API</span>
+            </div>
+            <h3 class="proj-name">Weather App</h3>
+            <p class="proj-desc">Real-time weather via device geolocation and a public REST API, with dynamic themed backgrounds and live forecast display.</p>
+            <div class="proj-stack">
+              <span>Flutter</span><span>REST API</span><span>Geolocation</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://linkedin.com/in/khalid-imran-30b118336" target="_blank" rel="noopener" class="proj-link-btn li-btn">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Instagram UI Clone (LinkedIn only) ── -->
+        <article class="proj-card" data-reveal data-delay="0" data-cat="flutter ui">
+          <div class="proj-thumb" style="--ga:#1a0829;--gb:#2d0f45">
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="ig-g" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#E1306C" stop-opacity="0.3"/>
+                  <stop offset="50%" stop-color="#833AB4" stop-opacity="0.2"/>
+                  <stop offset="100%" stop-color="#F77737" stop-opacity="0.2"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#ig-g)"/>
+              <rect x="135" y="14" width="130" height="194" rx="22" fill="#0d0514" stroke="#833AB4" stroke-width="1.5" opacity="0.85"/>
+              <rect x="143" y="27" width="114" height="167" rx="13" fill="#08020f"/>
+              <!-- Stories row -->
+              <circle cx="166" cy="50" r="12" fill="none" stroke="#E1306C" stroke-width="2" opacity="0.7"/>
+              <circle cx="196" cy="50" r="12" fill="none" stroke="#F77737" stroke-width="2" opacity="0.6"/>
+              <circle cx="226" cy="50" r="12" fill="none" stroke="#833AB4" stroke-width="2" opacity="0.6"/>
+              <!-- Post placeholder -->
+              <rect x="152" y="70" width="96" height="80" rx="4" fill="#833AB4" opacity="0.15" stroke="#833AB4" stroke-width="0.8"/>
+              <!-- Heart / like icons -->
+              <path d="M162,162 Q160,157 164,157 Q166,157 167,160 Q168,157 170,157 Q174,157 172,162 L167,168 Z" fill="#E1306C" opacity="0.7"/>
+              <rect x="180" y="161" width="36" height="5" rx="2.5" fill="#ffffff" opacity="0.15"/>
+              <rect x="152" y="175" width="65" height="5" rx="2.5" fill="#ffffff" opacity="0.12"/>
+            </svg>
+            <div class="proj-icon-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta-row">
+              <span class="proj-cat-tag">Flutter · UI Clone</span>
+            </div>
+            <h3 class="proj-name">Instagram UI Clone</h3>
+            <p class="proj-desc">Pixel-accurate Instagram interface — feed, stories, reels, profile, navigation — emphasising layout precision and reusable widget composition.</p>
+            <div class="proj-stack">
+              <span>Flutter</span><span>Dart</span><span>Widgets</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://linkedin.com/in/khalid-imran-30b118336" target="_blank" rel="noopener" class="proj-link-btn li-btn">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── WhatsApp UI Clone (LinkedIn only) ── -->
+        <article class="proj-card" data-reveal data-delay="80" data-cat="flutter ui">
+          <div class="proj-thumb" style="--ga:#0a1f12;--gb:#0d3320">
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="wag" cx="50%" cy="50%" r="65%">
+                  <stop offset="0%" stop-color="#25D366" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#0d3320" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#wag)"/>
+              <rect x="135" y="14" width="130" height="194" rx="22" fill="#060f09" stroke="#25D366" stroke-width="1.5" opacity="0.85"/>
+              <rect x="143" y="27" width="114" height="167" rx="13" fill="#020a04"/>
+              <!-- Header bar -->
+              <rect x="143" y="27" width="114" height="28" rx="13" fill="#25D366" opacity="0.18"/>
+              <!-- Chat rows -->
+              <circle cx="162" cy="68" r="9" fill="#25D366" opacity="0.25"/>
+              <rect x="178" y="62" width="60" height="5" rx="2.5" fill="#ffffff" opacity="0.2"/>
+              <rect x="178" y="71" width="45" height="4" rx="2" fill="#25D366" opacity="0.3"/>
+              <circle cx="162" cy="96" r="9" fill="#25D366" opacity="0.18"/>
+              <rect x="178" y="90" width="55" height="5" rx="2.5" fill="#ffffff" opacity="0.15"/>
+              <rect x="178" y="99" width="38" height="4" rx="2" fill="#25D366" opacity="0.25"/>
+              <!-- Message bubble -->
+              <rect x="153" y="118" width="70" height="24" rx="10" fill="#25D366" opacity="0.35"/>
+              <rect x="158" y="125" width="55" height="4" rx="2" fill="#ffffff" opacity="0.35"/>
+              <!-- Reply bubble -->
+              <rect x="174" y="148" width="65" height="24" rx="10" fill="#ffffff" opacity="0.06" stroke="#25D366" stroke-width="0.7"/>
+              <rect x="179" y="155" width="50" height="4" rx="2" fill="#25D366" opacity="0.3"/>
+            </svg>
+            <div class="proj-icon-overlay"><i class="fa-brands fa-whatsapp"></i></div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta-row">
+              <span class="proj-cat-tag">Flutter · UI Clone</span>
+            </div>
+            <h3 class="proj-name">WhatsApp UI Clone</h3>
+            <p class="proj-desc">Complete WhatsApp-style chat interface with tabbed navigation across chats, status, and calls, plus themed conversation screens.</p>
+            <div class="proj-stack">
+              <span>Flutter</span><span>Dart</span><span>Navigation</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://linkedin.com/in/khalid-imran-30b118336" target="_blank" rel="noopener" class="proj-link-btn li-btn">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Tic Tac Toe (LinkedIn only) ── -->
+        <article class="proj-card" data-reveal data-delay="160" data-cat="flutter">
+          <div class="proj-thumb" style="--ga:#1a1207;--gb:#3d2c09">
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="ttg" cx="50%" cy="50%" r="65%">
+                  <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.28"/>
+                  <stop offset="100%" stop-color="#3d2c09" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#ttg)"/>
+              <rect x="135" y="14" width="130" height="194" rx="22" fill="#0d0a04" stroke="#F59E0B" stroke-width="1.5" opacity="0.85"/>
+              <rect x="143" y="27" width="114" height="167" rx="13" fill="#08060200"/>
+              <!-- Grid -->
+              <line x1="183" y1="70" x2="183" y2="160" stroke="#F59E0B" stroke-width="2" opacity="0.5"/>
+              <line x1="217" y1="70" x2="217" y2="160" stroke="#F59E0B" stroke-width="2" opacity="0.5"/>
+              <line x1="153" y1="100" x2="247" y2="100" stroke="#F59E0B" stroke-width="2" opacity="0.5"/>
+              <line x1="153" y1="130" x2="247" y2="130" stroke="#F59E0B" stroke-width="2" opacity="0.5"/>
+              <!-- X marks -->
+              <line x1="158" y1="75" x2="175" y2="92" stroke="#E2E8F0" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="175" y1="75" x2="158" y2="92" stroke="#E2E8F0" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="222" y1="105" x2="239" y2="122" stroke="#E2E8F0" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="239" y1="105" x2="222" y2="122" stroke="#E2E8F0" stroke-width="2.5" stroke-linecap="round"/>
+              <!-- O marks -->
+              <circle cx="200" cy="85" r="10" fill="none" stroke="#F59E0B" stroke-width="2.5" opacity="0.9"/>
+              <circle cx="168" cy="115" r="10" fill="none" stroke="#F59E0B" stroke-width="2.5" opacity="0.9"/>
+              <!-- Win indicator -->
+              <rect x="160" y="175" width="80" height="10" rx="5" fill="#F59E0B" opacity="0.5"/>
+            </svg>
+            <div class="proj-icon-overlay"><i class="fa-solid fa-gamepad"></i></div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta-row">
+              <span class="proj-cat-tag">Flutter · Game</span>
+            </div>
+            <h3 class="proj-name">Tic Tac Toe Game</h3>
+            <p class="proj-desc">Interactive two-player game with complete game-state logic, win/draw detection, animated reset flow, and polished UI transitions.</p>
+            <div class="proj-stack">
+              <span>Flutter</span><span>Dart</span><span>Game Logic</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://linkedin.com/in/khalid-imran-30b118336" target="_blank" rel="noopener" class="proj-link-btn li-btn">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Calculator App (LinkedIn only) ── -->
+        <article class="proj-card" data-reveal data-delay="0" data-cat="flutter">
+          <div class="proj-thumb" style="--ga:#071a2c;--gb:#0e3050">
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="cag" cx="50%" cy="40%" r="65%">
+                  <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.28"/>
+                  <stop offset="100%" stop-color="#0e3050" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#cag)"/>
+              <rect x="135" y="14" width="130" height="194" rx="22" fill="#030d1c" stroke="#06B6D4" stroke-width="1.5" opacity="0.85"/>
+              <rect x="143" y="27" width="114" height="167" rx="13" fill="#020810"/>
+              <!-- Display -->
+              <rect x="151" y="34" width="98" height="34" rx="8" fill="#06B6D4" opacity="0.1"/>
+              <rect x="186" y="44" width="55" height="10" rx="5" fill="#06B6D4" opacity="0.4"/>
+              <!-- Button grid -->
+              <rect x="152" y="76" width="22" height="18" rx="6" fill="#06B6D4" opacity="0.2"/>
+              <rect x="180" y="76" width="22" height="18" rx="6" fill="#06B6D4" opacity="0.2"/>
+              <rect x="208" y="76" width="22" height="18" rx="6" fill="#06B6D4" opacity="0.2"/>
+              <rect x="152" y="100" width="22" height="18" rx="6" fill="#06B6D4" opacity="0.15"/>
+              <rect x="180" y="100" width="22" height="18" rx="6" fill="#06B6D4" opacity="0.15"/>
+              <rect x="208" y="100" width="22" height="18" rx="6" fill="#06B6D4" opacity="0.35"/>
+              <rect x="152" y="124" width="22" height="18" rx="6" fill="#06B6D4" opacity="0.15"/>
+              <rect x="180" y="124" width="22" height="18" rx="6" fill="#06B6D4" opacity="0.15"/>
+              <rect x="208" y="124" width="22" height="18" rx="6" fill="#06B6D4" opacity="0.35"/>
+              <rect x="152" y="148" width="50" height="18" rx="6" fill="#06B6D4" opacity="0.15"/>
+              <rect x="208" y="148" width="22" height="18" rx="6" fill="#06B6D4" opacity="0.5"/>
+            </svg>
+            <div class="proj-icon-overlay"><i class="fa-solid fa-calculator"></i></div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta-row">
+              <span class="proj-cat-tag">Flutter · Utility</span>
+            </div>
+            <h3 class="proj-name">Calculator App</h3>
+            <p class="proj-desc">Fully functional calculator with a clean responsive interface, chained arithmetic operations, decimal inputs, and robust edge-case error handling.</p>
+            <div class="proj-stack">
+              <span>Flutter</span><span>Dart</span><span>State Management</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://linkedin.com/in/khalid-imran-30b118336" target="_blank" rel="noopener" class="proj-link-btn li-btn">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /projects-grid -->
+
+      <div class="projects-cta" data-reveal>
+        <a href="https://github.com/khalid-myprojects?tab=repositories" target="_blank" rel="noopener" class="btn-outline">
+          <i class="fa-brands fa-github"></i>
+          View all on GitHub
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════ EDUCATION ══════════════════════ -->
+  <section id="education">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-eyebrow" data-reveal>Education</span>
+        <h2 class="sec-title" data-reveal>Academic <em>background</em></h2>
+      </div>
+
+      <div class="edu-card" data-reveal>
+        <div class="edu-icon"><i class="fa-solid fa-building-columns"></i></div>
+        <div class="edu-body">
+          <span class="edu-badge">Current</span>
+          <h3>BS Computer Science</h3>
+          <p class="edu-institution">University of Engineering &amp; Technology Taxila</p>
+          <p class="edu-period"><i class="fa-regular fa-calendar"></i> 2023 – Present &nbsp;·&nbsp; 3rd Year · 6th Semester</p>
+          <div class="edu-courses">
+            <span>Data Structures</span>
+            <span>OOP (C++)</span>
+            <span>Algorithms</span>
+            <span>Database Systems</span>
+            <span>Software Engineering</span>
+            <span>Computer Networks</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages & Soft Skills -->
+      <div class="extra-grid" data-reveal>
+        <div class="extra-card">
+          <h4><i class="fa-solid fa-language"></i> Languages</h4>
+          <ul>
+            <li><span>English</span><span class="level">Professional</span></li>
+            <li><span>Urdu</span><span class="level">Native</span></li>
+            <li><span>Punjabi</span><span class="level">Native</span></li>
+          </ul>
+        </div>
+        <div class="extra-card">
+          <h4><i class="fa-solid fa-star"></i> Soft Skills</h4>
+          <ul>
+            <li><span>Teamwork &amp; Collaboration</span></li>
+            <li><span>Clear Communication</span></li>
+            <li><span>Adaptability</span></li>
+            <li><span>Time Management</span></li>
+            <li><span>Critical Thinking</span></li>
+          </ul>
+        </div>
+        <div class="extra-card">
+          <h4><i class="fa-solid fa-heart"></i> Interests</h4>
+          <ul>
+            <li><span>Mobile App Development</span></li>
+            <li><span>Open Source Projects</span></li>
+            <li><span>UI/UX Exploration</span></li>
+            <li><span>Tech Communities</span></li>
+            <li><span>Continuous Learning</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CONTACT ══════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-eyebrow" data-reveal>Contact</span>
+        <h2 class="sec-title" data-reveal>Let's work <em>together</em></h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info" data-reveal>
+          <p class="contact-intro">I'm actively looking for <strong>internship opportunities</strong>. If you have a project, a question, or just want to connect — my inbox is always open.</p>
+
+          <div class="contact-links-list">
+            <a href="mailto:khalidimran4566450@gmail.com" class="c-link">
+              <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="c-text">
+                <span class="c-label">Email</span>
+                <span class="c-val">khalidimran4566450@gmail.com</span>
+              </div>
+              <i class="fa-solid fa-arrow-right c-arr"></i>
+            </a>
+            <a href="https://linkedin.com/in/khalid-imran-30b118336" target="_blank" rel="noopener" class="c-link">
+              <div class="c-icon" style="--ci:#0A66C2"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div class="c-text">
+                <span class="c-label">LinkedIn</span>
+                <span class="c-val">khalid-imran-30b118336</span>
+              </div>
+              <i class="fa-solid fa-arrow-right c-arr"></i>
+            </a>
+            <a href="https://github.com/khalid-myprojects" target="_blank" rel="noopener" class="c-link">
+              <div class="c-icon" style="--ci:#ffffff"><i class="fa-brands fa-github"></i></div>
+              <div class="c-text">
+                <span class="c-label">GitHub</span>
+                <span class="c-val">khalid-myprojects</span>
+              </div>
+              <i class="fa-solid fa-arrow-right c-arr"></i>
+            </a>
+            <div class="c-link non-link">
+              <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="c-text">
+                <span class="c-label">Location</span>
+                <span class="c-val">Wah Cantt, Pakistan 🇵🇰</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="Khalid_Imran_CV.pdf" download class="btn-primary cv-dl-btn">
+            <i class="fa-solid fa-download"></i> Download CV
+          </a>
+        </div>
+
+        <div class="contact-form-wrap" data-reveal data-delay="150">
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="f-name">Full Name</label>
+                <input type="text" id="f-name" name="name" placeholder="Your name" required autocomplete="name"/>
+              </div>
+              <div class="form-field">
+                <label for="f-email">Email Address</label>
+                <input type="email" id="f-email" name="email" placeholder="you@email.com" required autocomplete="email"/>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="f-subject">Subject</label>
+              <input type="text" id="f-subject" name="subject" placeholder="Internship opportunity…"/>
+            </div>
+            <div class="form-field">
+              <label for="f-msg">Message</label>
+              <textarea id="f-msg" name="message" rows="5" placeholder="Tell me about the opportunity…" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary send-btn" id="send-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span id="send-label">Send Message</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="footer-logo">KI<span>.</span></a>
+      <p class="footer-copy">&copy; 2025 Khalid Imran &nbsp;·&nbsp; Built with <i class="fa-solid fa-heart"></i> in Pakistan</p>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/khalid-imran-30b118336" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/khalid-myprojects" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:khalidimran4566450@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
